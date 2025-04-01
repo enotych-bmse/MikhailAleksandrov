@@ -10,22 +10,26 @@
     <div class="container">
       <div class="info">
         <img src="avatar.jpg" alt="Фото Лермонтова" class="avatar">
-        <h1>Михаил Александров</h1>
-        <p><strong>Frontend-разработчик</strong></p>
-        <p>Я учусь верстать веб-сайты.</p>
+        <div class="info-text">
+          <h1>Михаил Александров</h1>
+          <p><strong>Frontend-разработчик</strong></p>
+          <p>Я учусь верстать веб-сайты.</p>
 
-        <h3>Мои контакты</h3>
-        <a href="https://t.me/Aleksandrov_MP" target="_blank">Telegram</a>
-          <!-- target открывает ссылки в новой вкладке, не уходя со страницы сайта  -->
+          <div class="info-contact">
+            <h3>Мои контакты</h3>
+            <a href="https://t.me/Aleksandrov_MP" target="_blank">Telegram</a>
+             <!-- target открывает ссылки в новой вкладке, не уходя со страницы сайта  -->
+          </div>
+        </div>
       </div>
       
       <div class="card bg-yellow">
         <h3>Мои увлечения</h3>
         <ol class="list">
-          <li>общение;</li>
-          <li>Call of Duty Mobile;</li>
-          <li>путешествия;</li>
-          <li>книги.</li>
+          <li>общение</li>
+          <li>Call of Duty Mobile</li>
+          <li>путешествия</li>
+          <li>книги</li>
         </ol>
       </div>
 
@@ -55,38 +59,43 @@
         <a href="secondPage.html">Перейти на вторую страницу</a>
       </div>
       
-      <h3>Связаться со мной</h3>
-      <form action="/">
-        <label for="name">Ваше имя:</label>
-        <input type="text" id="name" placeholder="Введите Ваше имя">
+      <div class="form">
+        <h3>Связаться со мной</h3>
+        <form action="/">
+          <div class="row">
+            <div class="form-group">
+              <label for="name">Ваше имя:</label>
+              <input type="text" id="name" placeholder="Введите Ваше имя">
+            </div>
 
-        <br>
+            <div class="form-group">
+              <label for="email">Ваша почта:</label>
+              <input type="email" id="email" placeholder="Введите email">
+            </div>
+          </div>
 
-        <label for="email">Ваша почта:</label>
-        <input type="email" id="email" placeholder="Введите email">
-        
-        <br>
+          <div class="form-group">
+            <label for="text">Ваше сообщение:</label>
+            <textarea name="text" id="text" rows="5" cols="25"></textarea>
+          </div>
 
-        <label for=""></label>
-        <input type="submit" id="" value="Связаться">
-        
-        <br>
+          <input type="submit" value="Связаться" class="btn">
+        </form>
+      </div>
 
-        <label for="text">Ваше сообщение:</label>
-        <textarea name="text" id="text" rows="5" cols="25"></textarea>
-      </form>
-
-
-      <!-- <div class="box-model">
+ <!-- <div class="box-model">
         <div></div>
         <div></div>
         <div></div>
         <div></div>
       </div> -->
 
-      <hr>
+      <div class="position">
+        <div class="box"></div>
+      </div>
 
-      <div style="margin-bottom: 500px;"></div>
     </div>
+
+    <div style="margin-bottom: 400px;"></div>
   </body>
 </html>

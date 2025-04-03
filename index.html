@@ -7,24 +7,29 @@
   </head>
 
   <body>
-    <div class="container">
+    <main class="main">
       <div class="info">
-        <img src="avatar.PNG" alt="Фото Лермонтова" class="avatar">
+        <img src="avatar.PNG" alt="Фото меня" class="avatar">
         <div class="info-text">
-          <h1>Михаил Александров</h1>
-          <p><strong>Frontend-разработчик</strong></p>
-          <p>Я учусь верстать веб-сайты.</p>
-
-          <div class="info-contact">
-            <h3>Мои контакты</h3>
-            <a href="https://t.me/Aleksandrov_MP" target="_blank">Telegram</a>
-             <!-- target открывает ссылки в новой вкладке, не уходя со страницы сайта  -->
-          </div>
+          <h1 class="headers">Михаил Александров</h1>
+          <h3 class="headers">Frontend-разработчик</h3>
+          <p>Адаптивная вёрстка веб-сайтов</p>
+          <p>Работа с чистым кодом</p>
+          <p>Качество в мелочах</p>
         </div>
       </div>
       
-      <div class="card bg-yellow">
-        <h3>Мои увлечения</h3>
+      <div class="card bg-blue">
+        <h3 class="headers">Обо мне</h3>
+        <p>
+          Привет! Меня зовут Михаил Александров, и я занимаюсь вёрсткой адаптивных веб-сайтов.<br>
+          Мне нравится писать код и видеть результат на экране — это доставляет мне удовольствие.<br>
+          Буду рад сотрудничать!
+        </p>
+      </div>
+
+      <div class="card bg-blue">
+        <h3 class="headers">Мои увлечения</h3>
         <ol class="list">
           <li>общение</li>
           <li>Call of Duty Mobile</li>
@@ -33,8 +38,21 @@
         </ol>
       </div>
 
-      <div class="card bg-green">
-        <h3>Опыт работы</h3>
+      <div class="card bg-blue">
+        <h3 class="headers">Мои навыки</h3>
+        <ol class="list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Java Script</li>
+          <li>React</li>
+          <li>SQL</li>
+          <li>Vue</li>
+          <li>REST</li>
+        </ol>
+      </div>
+
+      <div class="card bg-blue">
+        <h3 class="headers">Опыт работы</h3>
         <table class="table">
           <tbody>
             <tr>
@@ -54,13 +72,13 @@
         </table>
       </div>
 
-      <div class="card bg-red">
-        <h3>Вторая страница сайта</h3>
-        <a href="secondPage.html">Перейти на вторую страницу</a>
+      <div class="card bg-blue">
+        <h3 class="headers">Портфолио</h3>
+        <p>Здесь будет моё портфолио.</p>
       </div>
       
-      <div class="form">
-        <h3>Связаться со мной</h3>
+      <!-- <div class="form">
+        <h3 class="headers">Связаться со мной</h3>
         <form action="/">
           <div class="row">
             <div class="form-group">
@@ -81,21 +99,30 @@
 
           <input type="submit" value="Связаться" class="btn">
         </form>
-      </div>
-
- <!-- <div class="box-model">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
       </div> -->
+
+      <!-- <div class="box-model">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
 
       <div class="position">
         <div class="box"></div>
+      </div> --> 
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer-contacts">
+        <h3>Контакты</h3>
+        <a href="https://t.me/Aleksandrov_MP" target="_blank"><img src="tg.png" alt="телеграм" class="f-c-img"></a>
       </div>
-
-    </div>
-
-    <div style="margin-bottom: 400px;"></div>
+      <div class="footer-data">
+        <p>© 2025 Михаил Александров</p>
+      </div>
+    </footer>
+    
   </body>
 </html>

@@ -14,6 +14,18 @@ body {
   min-height: 100vh;
 }
 
+.header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.header-text {
+  text-align: center;
+}
+
 .avatar {
   width: 300px;
   border-radius: 50%;
@@ -25,12 +37,12 @@ body {
   color: #0f141e;
   font-family: "Stalinist One", sans-serif;
   font-weight: 100;
-  letter-spacing: 2px;
+  letter-spacing: 5px;
   word-spacing: 5px;
 }
 
 .headers {
-  color: #26619c;
+  color: #0f141e;
   font-family: "Stalinist One", sans-serif;
   font-weight: 200;
 }
@@ -89,18 +101,13 @@ a:visited {
   color: purple;
 }
 
-.bg-blue {
-  background: #bcd4e6;
-}
-
-.bg-blue a {
-  color: #0f141e;
-}
-
 .card {
   padding: 15px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 100px;
   border-radius: 20px;
+
+  border: 1px solid #0f141e;
+  background: #cbcaca;
 }
 
 .card h2 {

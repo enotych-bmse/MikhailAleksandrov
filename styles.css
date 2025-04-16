@@ -15,11 +15,13 @@ body {
 }
 
 .header {
-  height: 100vh;
+  /* height: 100vh; */
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+
+  margin: 50px 0 120px;
 }
 
 .header-text {
@@ -29,8 +31,9 @@ body {
 .avatar {
   width: 300px;
   border-radius: 50%;
-  box-shadow: 4px 4px 14px rgba(38, 97, 156, 25%);
-  background: firebrick;
+  box-shadow: 4px 4px 14px rgba(15, 20, 30, 0.251);
+  background: #b22222;
+  border: 1px solid #0f141e;
 }
 
 .logo {
@@ -225,6 +228,7 @@ a:visited {
 
 .footer {
   background: #86898f;
+  border-top: 1px solid #0f141e;
   text-align: center;
   width: 100%;
 }

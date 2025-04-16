@@ -14,20 +14,6 @@ body {
   min-height: 100vh;
 }
 
-.header {
-  /* height: 100vh; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-
-  margin: 50px auto 120px;
-}
-
-.header-text {
-  text-align: center;
-}
-
 .avatar {
   width: 300px;
   border-radius: 50%;

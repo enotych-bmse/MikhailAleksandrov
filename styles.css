@@ -1,51 +1,96 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
 
-body {
-  background-color: #f8f8ff;
-  color: #0f141e;
+/* ===== Базовые настройки ===== */
+:root {
+  /* Цвета */
+  --color-bg: #f8f8ff;
+  --color-text: #0f141e;
+  --color-accent: #b22222;
+  --color-card: #cbcaca;
+  --color-border: #86898f;
+  --color-link: #0f141e;
+  --color-link-visited: purple;
+  --color-link-active: blue;
 
+  /* Шрифты */
+  --font-main: "Roboto", sans-serif;
+  --font-heading: "Stalinist One", sans-serif;
+  --font-logo: "Stalinist One", sans-serif;
+
+  /* Отступы */
+  --space-xs: 5px;
+  --space-sm: 10px;
+  --space-md: 15px;
+  --space-lg: 20px;
+  --space-xl: 30px;
+  --space-xxl: 50px;
+}
+
+/* ===== Базовые стили ===== */
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-main);
   font-size: 16px;
   font-weight: 400;
-  font-family: "Roboto", sans-serif;
-
-  /* для подвала */
   margin: 0;
   min-height: 100vh;
+  line-height: 1.5;
 }
 
+/* ===== Компоненты ===== */
+/* Контейнер основного содержимого */
+.main {
+  max-width: 750px;
+  margin: 0 auto;
+  padding: var(--space-xl) 0 var(--space-xxl);
+}
+
+/* Карточка */
+.card {
+  background: var(--color-card);
+  border: 1px solid var(--color-text);
+  border-radius: 20px;
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-xxl);
+}
+
+/* Аватар */
 .avatar {
   width: 300px;
+  max-width: 100%;
+  height: auto;
   border-radius: 50%;
   box-shadow: 4px 4px 14px rgba(15, 20, 30, 0.251);
-  background: #b22222;
-  border: 1px solid #0f141e;
+  background: var(--color-accent);
+  border: 1px solid var(--color-text);
+  display: block;
 }
 
+/* Логотип */
 .logo {
-  color: #0f141e;
-  font-family: "Stalinist One", sans-serif;
+  color: var(--color-text);
+  font-family: var(--font-logo);
   font-weight: 100;
   letter-spacing: 5px;
   word-spacing: 5px;
+  margin: 0;
 }
 
+/* Заголовки */
 .headers {
-  color: #0f141e;
-  font-family: "Stalinist One", sans-serif;
+  color: var(--color-text);
+  font-family: var(--font-heading);
   font-weight: 200;
+  margin: var(--space-sm) 0;
 }
 
+/* Блок информации */
 .info {
-  margin-bottom: 100px;
+  margin-bottom: var(--space-xxl);
   display: flex;
-}
-
-@media (max-width: 700px) {
-  .info {
-    text-align: center;
-    display: block;
-  }
+  align-items: center;
 }
 
 .info-text {
@@ -53,28 +98,47 @@ body {
 }
 
 .info-text h3 {
-  margin: 30px 0 10px 0;
+  margin: var(--space-xl) 0 var(--space-sm);
 }
 
 .info p {
-  color: #86898f;
-  
+  color: var(--color-border);
   margin: 0;
   text-decoration: none;
   letter-spacing: 2px;
   word-spacing: 4px;
 }
 
-/* Box Model */
-.main {
-  max-width: 750px;
-  margin: auto;
-  padding-top: 30px;
-  padding-bottom: 100px;
+/* Сетка */
+.grid {
+  display: grid;
+  gap: var(--space-lg);
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: var(--space-md);
 }
 
+/* Элемент навыков */
+.skills-example {
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.skills-example p {
+  margin: 0;
+  padding: var(--space-xs);
+}
+
+/* Изображение портфолио */
+.portfolio-example-img {
+  width: 100%;
+  padding: 1px;
+  border-radius: 5px;
+}
+
+/* Ссылки */
 a {
-  color: #0f141e;
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -83,150 +147,29 @@ a:hover {
 }
 
 a:active {
-  color: blue;
+  color: var(--color-link-active);
 }
 
 a:visited {
-  color: purple;
+  color: var(--color-link-visited);
 }
 
-.card {
-  padding: 15px 20px;
-  margin-bottom: 100px;
-  border-radius: 20px;
-
-  border: 1px solid #0f141e;
-  background: #cbcaca;
-}
-
-.card h2 {
-  margin-bottom: 10px;
-}
-
-.list {
-  padding: 0 10px;
-  list-style: none;
-}
-
-.list li {
-  color: #0f141e;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #86898f;
-  padding-bottom: 5px;
-}
-
-.table {
-  width: 100%;
-  text-align: center;
-}
-
-.table td {
-  padding-bottom: 10px;
-}
-
-.table td:nth-child(1),
-.table td:nth-child(2),
-.table td:nth-child(3) {
-  color: #0f141e;
-}
-
-.form {
-  margin-top: 70px;
-}
-
-.form h3 {
-  text-align: center;
-}
-
-.form-group label {
-  display: block;
-  font-size: 14px;
-  color: #86898f;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  box-sizing: border-box;
-  border: none;
-  background: transparent;
-  border-bottom: 1px solid #ccc;
-  color: #000;
-  padding: 15px 0 10px;
-  outline: none;
-  font-family: inherit;
-}
-
-.row {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.row > .form-group {
-  width: 50%;
-  margin-right: 20px;
-}
-
-.row > .form-group:last-child {
-  margin-right: 0px;
-}
-
-.btn {
-  background: #ccc;
-  color: #0f141e;
-  font-family: inherit;
-  border: none;
-  padding: 15px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.btn:hover {
-  opacity: 0.9;
-}
-
-.grid {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  margin-bottom: 15px;
-}
-
-.skills-example {
-  border: 1px solid #86898f;
-  border-radius: 5px;
-  /* background: #d0e8fa; */
-  text-align: center;
-}
-
-.skills-example p {
-  margin: 0;
-  padding: 5px;
-}
-
-.portfolio-example-img {
-  width: 100%;
-  padding: 1px;
-  /* border: 1px solid #d4af37; */
-  border-radius: 5px;
-}
-
+/* Подвал */
 .footer {
-  background: #86898f;
-  border-top: 1px solid #0f141e;
+  background: var(--color-border);
+  border-top: 1px solid var(--color-text);
   text-align: center;
   width: 100%;
 }
 
 .footer-contacts {
   margin: 0;
-  padding-top: 12px;
+  padding-top: var(--space-sm);
 }
 
 .footer-contacts-h3 {
-  color: #0f141e;
-  margin: 0 0 15px 0;
+  color: var(--color-text);
+  margin: 0 0 var(--space-md) 0;
   padding: 0;
 }
 
@@ -234,12 +177,8 @@ a:visited {
   width: 30px;
 }
 
-/* .footer-contacts a {
-  color: #26619c;
-} */
-
 .footer-data {
-  padding: 50px 0 0 0;
+  padding: var(--space-xxl) 0 0;
 }
 
 .footer-data p {
@@ -248,14 +187,29 @@ a:visited {
   letter-spacing: 1px;
 }
 
-/* .contacts {
-  background-color: peru;
-  padding: 15px 40px;
+/* ===== Адаптивность ===== */
+@media (max-width: 768px) {
+  .info {
+    text-align: center;
+    display: block;
+  }
+  
+  .info-text {
+    margin-left: 0;
+    margin-top: var(--space-lg);
+  }
+  
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
-  border: 5px solid red;
-  border-bottom-style: dotted;
-  border-top-width: 15px;
-  border-right-color: blue;
-
-  margin: 20px 15px 10px 25px;
-} */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .avatar {
+    max-width: 250px;
+  }
+}

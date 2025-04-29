@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Boldonse&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
 
-/* ===== Базовые настройки ===== */
+/* ===== БАЗОВЫЕ НАСТРОЙКИ ===== */
 :root {
-  /* Цвета */
+
+  /* ===== Цвета ===== */
   --color-bg: #f8f8ff;
   --color-text: #0f141e;
   --color-accent: #b22222;
@@ -13,41 +14,42 @@
   --color-link-visited: purple;
   --color-link-active: blue;
 
-  /* Шрифты */
+  /* ===== Шрифты ===== */
   --font-main: "Roboto", sans-serif;
   --font-heading: "Stalinist One", sans-serif;
   --font-logo: "Stalinist One", sans-serif;
 
-  /* Отступы */
-  --space-xs: 5px;
-  --space-sm: 10px;
-  --space-md: 15px;
-  --space-lg: 20px;
-  --space-xl: 30px;
-  --space-xxl: 50px;
+/* ===== Отступы ===== */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-xxl: 5rem;
 }
 
-/* ===== Базовые стили ===== */
+/* ===== БАЗОВЫЕ СТИЛИ ===== */
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-main);
-  font-size: 16px;
+  font-size: clamp(1rem, 2vw, 1.1rem); /* Адаптивный размер шрифта */
   font-weight: 400;
   margin: 0;
   min-height: 100vh;
   line-height: 1.5;
 }
 
-/* ===== Компоненты ===== */
-/* Контейнер основного содержимого */
+/* ===== КОМПОНЕНТЫ ===== */
+
+/* ===== Контейнер основного содержимого ===== */
 .main {
-  max-width: 750px;
+  width: min(100% - 2rem, 750px); /* Адаптивная ширина с отступами */
   margin: 0 auto;
   padding: var(--space-xl) 0 var(--space-xxl);
 }
 
-/* Карточка */
+/* ===== Карточка ===== */
 .card {
   background: var(--color-card);
   border: 1px solid var(--color-text);
@@ -56,160 +58,164 @@ body {
   margin-bottom: var(--space-xxl);
 }
 
-/* Аватар */
+/* ===== Аватар ===== */
 .avatar {
-  width: 300px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 250px;
   height: auto;
   border-radius: 50%;
   box-shadow: 4px 4px 14px rgba(15, 20, 30, 0.251);
   background: var(--color-accent);
   border: 1px solid var(--color-text);
   display: block;
+  margin: 0 auto var(--space-lg);
 }
 
-/* Логотип */
+/* ===== Логотип ===== */
 .logo {
   color: var(--color-text);
   font-family: var(--font-logo);
   font-weight: 100;
-  letter-spacing: 5px;
-  word-spacing: 5px;
+  letter-spacing: clamp(1px, 1vw, 5px); /* Адаптивный межбуквенный интервал */
+  word-spacing: clamp(1px, 1vw, 5px); /* Адаптивный межсловный интервал */
   margin: 0;
+  font-size: clamp(1.5rem, 8vw, 3rem); /* Адаптивный размер */
 }
 
-/* Заголовки */
-.headers {
+/* ===== Заголовки ===== */
+.headers, .info-header {
   color: var(--color-text);
   font-family: var(--font-heading);
   font-weight: 200;
+  font-size: clamp(1.2rem, 4vw, 1.8rem); /* Адаптивный размер */
+  letter-spacing: clamp(0.5px, 0.5vw, 2px); /* Адаптивный интервал */
+
+  text-align: center;
   margin: var(--space-sm) 0;
 }
 
-/* Блок информации */
+/* ===== Блок информации ===== */
 .info {
-  margin-bottom: var(--space-xxl);
   display: flex;
-  align-items: center;
+  margin-bottom: var(--space-xxl);
 }
 
-.info-text {
-  margin-left: 40px;
-}
-
-.info-text h3 {
-  margin: var(--space-xl) 0 var(--space-sm);
-}
+.info-text h3 {margin: var(--space-xl) 0 var(--space-sm);}
 
 .info p {
   color: var(--color-border);
   margin: 0;
   text-decoration: none;
-  letter-spacing: 2px;
-  word-spacing: 4px;
+  letter-spacing: clamp(0.5px, 0.5vw, 2px); /* Адаптивный интервал */
+  word-spacing: clamp(1px, 1vw, 4px); /* Адаптивный интервал */
 }
 
-/* Сетка */
+/* ===== Сетка ===== */
 .grid {
   display: grid;
-  gap: var(--space-lg);
-  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Адаптивная сетка */
   margin-bottom: var(--space-md);
 }
 
-/* Элемент навыков */
+/* ===== Элемент навыков ===== */
 .skills-example {
   border: 1px solid var(--color-border);
-  border-radius: 5px;
+  border-radius: var(--space-sm);
   text-align: center;
+  padding: var(--space-sm);
 }
 
-.skills-example p {
-  margin: 0;
-  padding: var(--space-xs);
-}
+.skills-example p {margin: 0;}
 
-/* Изображение портфолио */
+/* ===== Изображение портфолио ===== */
 .portfolio-example-img {
   width: 100%;
-  padding: 1px;
-  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--space-sm);
+  display: block;
 }
 
-/* Ссылки */
-a {
-  color: var(--color-link);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:active {
-  color: var(--color-link-active);
-}
-
-a:visited {
-  color: var(--color-link-visited);
-}
-
-/* Подвал */
+/* ===== Подвал ===== */
 .footer {
   background: var(--color-border);
   border-top: 1px solid var(--color-text);
+
   text-align: center;
-  width: 100%;
+  width: 100vw;
+
+  margin-left: calc(-50vw + 50%);
+  padding: var(--space-md) 0;
 }
 
-.footer-contacts {
-  margin: 0;
-  padding-top: var(--space-sm);
-}
+.footer-contacts {margin: 0 auto;}
 
 .footer-contacts-h3 {
   color: var(--color-text);
   margin: 0 0 var(--space-md) 0;
   padding: 0;
+  font-size: clamp(1rem, 3vw, 1.5rem); /* Адаптивный размер */
 }
 
 .f-c-img {
-  width: 30px;
+  width: clamp(25px, 8vw, 40px); /* Адаптивный размер иконки */
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
-.footer-data {
-  padding: var(--space-xxl) 0 0;
-}
+.f-c-img:hover {transform: scale(1.1);}
+
+.footer-data {padding-top: var(--space-xl);}
 
 .footer-data p {
   margin: 0;
   padding-bottom: 2px;
   letter-spacing: 1px;
+  font-size: clamp(0.8rem, 2vw, 1rem); /* Адаптивный размер */
 }
 
-/* ===== Адаптивность ===== */
-@media (max-width: 768px) {
+/* ===== АДАПТИВНОСТЬ ===== */
+
+/* ===== Десктопы ===== */
+@media (min-width: 768px) {
+  .info, .info-header {
+    flex-direction: row;
+    align-items: left;
+    text-align: left;
+  }
+  
+  .info-text {
+    margin-left: var(--space-xl);
+    text-align: left;
+  }
+  
+  .avatar {
+    max-width: 300px; /* Возвращаем исходный размер на десктопах */
+    height: auto;
+    margin: 0 auto;
+  }
+}
+
+/* ===== Смартфоны ===== */
+@media (max-width: 767px) {
   .info {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    display: block;
   }
   
   .info-text {
     margin-left: 0;
     margin-top: var(--space-lg);
+    text-align: center;
   }
   
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
+  /* Уменьшаем отступы для мобильных */
+  .main {padding: var(--space-lg) 1rem var(--space-xxl);}
   
-  .avatar {
-    max-width: 250px;
+  .card {
+    padding: var(--space-md);
+    margin-bottom: var(--space-xl);
   }
 }
